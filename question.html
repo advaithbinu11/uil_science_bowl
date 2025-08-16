@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title> 
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2 class="header">UIL Science</h2>
+        <a href="index.html">Return to home</a>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <p id = "output"></p>
+<div id="output"></div>
+
+<style>
+    .option-btn {
+        margin: 4px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: default;
+    }
+    .correct {
+        background-color: #d4edda;
+        color: #155724;
+    }
+    .incorrect {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+    .neutral {
+        background-color: #e2e3e5;
+        color: #383d41;
+    }
+</style>
+
+<script>
+    var data = window.localStorage.getItem("data");
+    var json = JSON.parse(data);
+    data = JSON.parse(json['body']);
+
+    var output = "";
+
+    data.forEach((q, index) => {
+        output += "<div style='margin-bottom:20px'>";
+        output += "<strong>Question " + (index + 1) + "</strong><br>";
+        output += "QID: " + q.QId + "<br>";
+        output += "Text: " + q.text + "<br>";
+        output += "Answer: " + q.answer + "<br>";
+        output += "Options:<br>";
+
+        q.options.forEach(option => {
+            let className = "neutral"; // Default to neutral
+            if (q.answer === "") {
+                className = "neutral";
+            } else if (option.includes(q.answer+")")) {
+                className = "correct";
+            } else {
+                className = "incorrect";
+            }
+
+            output += `<button class="option-btn ${className}">${option}</button><br>`;
+        });
+
+        output += "<hr></div>";
+    });
+
+    document.getElementById("output").innerHTML = output;
+</script>
+    </body>
+</html>

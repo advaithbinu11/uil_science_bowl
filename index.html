@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UIL Science Questions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function clickCounter(text) {
+               window.localStorage.setItem("topic", text);
+               window.location.href = "loading.html";
+            }
+            </script>
+    </head>
+    <body>
+        <h2 class="header">UIL Science Bowl</h2>
+        <p>Hello, welcome to Westlake's UIL Science Question Bank. This website is developed by Advaith Binu.</p>
+        <h3 style = "font-size:x-large;">Choose a topic</h3>
+        <p><i><b>Biology</b></i></p>
+        <button onclick="clickCounter('Relationship Between Structure and Function')" type="button">Relationship Between Structure and Function</button>
+        <button onclick="clickCounter('Cellular and Acellular Replication')" type="button">Cellular and Acellular Replication</button>
+        <button onclick="clickCounter('Energy Transformations')" type="button">Energy Transformations</button>
+        <button onclick="clickCounter('Gene Expression')" type="button">Gene Expression</button>
+        <br>
+        <button onclick="clickCounter('Genetics and Inheritance')" type="button">Genetics and Inheritance</button>
+        <button onclick="clickCounter('Evoluton')" type="button">Evolution</button>
+        <button onclick="clickCounter('Diseases')" type="button">Diseases</button>
+        <button onclick="clickCounter('Ecology and the Environment')" type="button">Ecology and the Environment</button>
+        <button onclick="clickCounter('Human Anatomy & Physiology')" type="button">Human Anatomy & Physiology</button>
+        <p><i><b>Chemistry</b></i></p>
+        <button onclick="clickCounter('Fundamentals')" type="button">Fundamentals</button>
+        <button onclick="clickCounter('Stoichiometry')" type="button">Stoichiometry</button>
+        <button onclick="clickCounter('Atomic Theory')" type="button">Atomic Theory</button>
+        <button onclick="clickCounter('Chemical Bonding and Structure')" type="button">Chemical Bonding and Structure</button>
+        <button onclick="clickCounter('Gases')" type="button">Gases</button>
+        <button onclick="clickCounter('Liquids and Solids')" type="button">Liquids and Solids</button>
+        <button onclick="clickCounter('Thermodynamics')" type="button">Thermodynamics</button>
+        <br>
+        <button onclick="clickCounter('Physical Equilibria')" type="button">Physical Equilibria</button>
+        <button onclick="clickCounter('Chemical Equilibria')" type="button">Chemical Equilibria</button>
+        <button onclick="clickCounter('Acids and Bases')" type="button">Acids and Bases</button>
+        <button onclick="clickCounter('Solubility Equilibria')" type="button">Solubility Equilibria</button>
+        <button onclick="clickCounter('Electrochemistry')" type="button">Electrochemistry</button>
+        <button onclick="clickCounter('Chemical Kinetics')" type="button">Chemical Kinetics</button>
+        <p><i><b>Physics</b></i></p>
+        <button onclick="clickCounter('Astronomy – The Solar System')" type="button">Astronomy – The Solar System</button>
+        <button onclick="clickCounter('Measurement & Dimensional Analysis')" type="button">Measurement, Dimensional Analysis, Significant Figures, Order of Magnitude</button>
+        <button onclick="clickCounter('Uniformly Accelerated Motion')" type="button">Uniformly Accelerated Motion</button>
+        <button onclick="clickCounter('Forces and Newton’s Laws')" type="button">Forces and Newton’s Laws</button>
+        <button onclick="clickCounter('Work, Energy, Power, Momentum')" type="button">Work, Energy, Power, Momentum</button>
+        <button onclick="clickCounter('Circular & Rotational Motion')" type="button">Circular and Rotational Motion, Equilibrium</button>
+        <button onclick="clickCounter('Waves, Sound, Harmonic Motion')" type="button">Waves, Sound, Harmonic Motion</button>
+        <button onclick="clickCounter('Thermodynamics')" type="button">Thermodynamics (no fluid dynamics this year)</button>
+        <button onclick="clickCounter('DC Circuits')" type="button">DC Circuits, Resistors, Capacitors</button>
+        <button onclick="clickCounter('Electric Fields and Potential')" type="button">Electric Fields and Potential, Gauss’ Law</button>
+        <button onclick="clickCounter('Magnetic Fields and Forces')" type="button">Magnetic Fields, Magnetic Materials, Ampere’s Law</button>
+        <button onclick="clickCounter('Electromagnetic Induction and AC Circuits')" type="button">Electromagnetic Induction, EM Oscillations, AC Circuits</button>
+        <button onclick="clickCounter('Wave Optics')" type="button">Geometric Optics, Wave Optics</button>
+        <button onclick="clickCounter('Modern Physics & Quantum Physics')" type="button">Modern Physics, Quantum Physics</button>
+        <br>
+        <p><i><b>Wildcards</b></i></p>
+        <button onclick="clickCounter('Wildcard')" type="button">Wildcards!!!</button>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Removed empty script tag -->
+    </body>
+</html>
